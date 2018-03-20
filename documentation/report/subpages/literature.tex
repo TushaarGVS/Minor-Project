@@ -1,0 +1,70 @@
+\chapter{Literature Review}
+
+\section{Background and Recent Work}
+
+\subsection{Real-Time Emotion Detection using RPi2}
+\begin{table}[h]
+\centering
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabularx}{\linewidth}{l X}
+\textbf{Authors:} & Suja, P. et al. \cite{suja2016} \\
+\textbf{Methodology:} & Using Raspberry Pi II, CMU MultiPIE database to detect emotions in real-time \\ 
+\textbf{Advantages:} & Real-time, speed and accuracy \\
+\textbf{Limitations:} & Only facial expressions are used (Speech was considered under `future work') \\
+\end{tabularx}
+\egroup
+\end{table}
+
+\subsection{Image Processing on RPi in Matlab}
+\begin{table}[h]
+\centering
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabularx}{\linewidth}{l X}
+\textbf{Authors:} & Horak, K. et al. \cite{horak2015} \\
+\textbf{Methodology:} & Using Raspberry Pi II, Simulink in Matlab to process images with many filters including `Sobel filter' etc. \\ 
+\textbf{Advantages:} & Speed, real-time, edge, corner, line detection \\
+\textbf{Limitations:} & Increased FPS due to transfer from RPi2 to Simulink \\
+\end{tabularx}
+\egroup
+\end{table}
+\pagebreak
+
+\subsection{Real-Time Face Recognition using RPi2}
+\begin{table}[h]
+\centering
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabularx}{\linewidth}{l X}
+\textbf{Authors:} & Viji, A. et al. \cite{viji2017} \\
+\textbf{Methodology:} & Using Raspberry Pi II, Haar cascade classifier, PCA feature extraction, Adaboost classification to detect faces in real-time \\ 
+\textbf{Advantages:} & Speed, real-time, accuracy \\
+\textbf{Limitations:} & Considers only PCA feature extraction
+\end{tabularx}
+\egroup
+\end{table}
+
+
+\subsection{Robust Real-Time Face Detection}
+\begin{table}[h]
+\centering
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabularx}{\linewidth}{l X}
+\textbf{Authors:} & Viola, P. et al. \cite{viola2004} \\
+\textbf{Methodology:} & Using Haar feature selection, creating an internal image, Adaboost training, Cascading classifiers to detect faces in real-time \\ 
+\textbf{Advantages:} & Minimal computation time and high detection accuracy \\
+\textbf{Limitations:} & Real-time conditions (illuminations, non-uniform conditions) were ignored
+\end{tabularx}
+\egroup
+\end{table}
+
+\section{Outcomes of Literature Review}
+Current state-of-art implementations consider facial expressions to be the primary source of emotion detection. Various methods for feature extraction have been used in the past like ASM, PCA which employ geometric-based feature detection. Processing on Raspberry Pi can give speeds upto 100ms and Viola-Jones feature detection gives about 95\% accuracy. Current state-of-art implementations do not consider parallelization of the process. 
+
+\section{Problem Statement}
+Capturing the image (real-time) using a camera (webcam, for experimental purposes). Face detection (and cropping if necessary) using Viola-Jones detection algorithm. Image processing and feature extraction using Active Shape Model (ASM) or using PCA algorithm. Classification using Adaboost classifier. The recognized emotion is displayed on the monitor. Finally, parallel model (master-slave) deployment using Quad-Pi (four RPi3).
+
+\section{Research Objectives}
+The main objective is to develop emotion recognition from facial images to Simulate and experiment in near real-time environment, Programming the Raspberry Pi III, Deals with Image Processing (cropping and face extraction), Feature extraction from grayscale face image extraction, and  Classify using Adaptive Boosting classifier trained with CMU MultiPIE database, Finally, use Quad-Pi (four RPi3) to implement master-slave parallel processing model to the deployed application.

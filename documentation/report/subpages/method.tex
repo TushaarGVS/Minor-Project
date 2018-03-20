@@ -1,0 +1,31 @@
+\chapter{Methodology}
+
+\section{System Architecture}
+The following components form the system architecture:
+\begin{itemize}
+\item Raspberry Pi III (Model B)
+\item Raspbian Stretch OS
+\item Ubuntu 16.04 OS
+\item Ethernet Crossover Cable
+\item SD Card
+\item Adapter for Raspberry Pi III
+\end{itemize}
+\section{Methodology}
+
+\subsection{Input}
+For real-time simulations, input is taken from webcam (further development would be to use a mobile robot) to dynamically recognize emotions, serves as input to Raspberry Pi III.
+
+\subsection{RPi3 Processing}
+Pre-Processing for Facial Feature Extraction is the beginning processing unit for RPi3 processing. Viola-Jones \cite{viola2004} face detection technique is used to detect the facial image. Viola-Jones used Haar wavelet concept to develop integral image to detect face. Haar features consider the different intensity of values of adjacent rectangular region as different area of face has different value of intensity from other region. After detection, facial image is saved for further processing and non-face area is removed. 
+
+\subsection{Image Processing}
+Image is cropped according to required size and converted in gray image. This cropped image is used as input to \textit{Sobel filter} for smoothing to remove the noise.
+
+\subsection{Feature Extraction}
+Feature extraction is based on geometric approach for which Active Shape Model (ASM) is used. ASM automatic fiducial point location algorithm is applied first to a facial expression image, and then Euclidean distances between center gravity coordinate and the annotated fiducial points coordinates of the face image are calculated. Extract geometric deformation difference features between a person's neutral expression and the other basic expressions. Compare with shape model to extract feature points of input facial image.
+
+\subsection{Classification}
+This is done by adaptive boosting classifier (AdaBoost). AdaBoost is a powerful learning concept that provides a solution to supervised classification learning task. It combines the performance of many weak classifiers to produce a powerful committee. AdaBoost is a flexible classifier which can be combined with any learning algorithm. It is very simple and easy to perform in which only one parameter i.e., number of iteration is varied to get good accuracy.
+
+\subsection{Quad-Pi Parallelization}
+Using master slave the Quad-Pi parallelization perform its operation, Master starts the slave computation, and the slave computation returns the result to the master. No significant dependencies among the slave computations is there. In sense of this research work, \textit{Sobel filter} can be parallelized. In case of multiple people in an image, multiple emotions detection is needed where speeds and task division matter \cite{redmon2016}.

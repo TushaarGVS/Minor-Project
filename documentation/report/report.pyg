@@ -1,0 +1,19 @@
+%\begin{lstlisting}[language=python]
+image = cv2.imread(filename, cv2.IMREAD_GRAYSCALE)
+laplacian = cv2.Laplacian(image, cv2.CV_64F)
+sobelX = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize = 5)
+sobelY = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize = 5)
+
+def sobelYFilter(directory):
+    deleteAllFiles(sobel_directory)
+    filelist = [f for f in os.listdir(directory)]
+    for f in filelist:
+        filename = faces_directory + f
+
+        image = cv2.imread(filename, cv2.IMREAD_GRAYSCALE)
+        sobelY = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize = 5)
+
+        sobelFile = sobel_directory + f
+        cv2.imwrite(sobelFile, sobelY)
+        plt.imshow(sobelY)
+%\end{lstlisting}

@@ -1,0 +1,13 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Flow of control from Input to Output to detect `Emotions' (real-time)}}{10}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Capturing through webcam in real-time (different illuminations and non-uniform conditions) with low resolution}}{13}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Converting the input image (from Linux) into grayscale}}{14}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Face Detection using Haar-Cascade Classifier (of figure \ref {fig:vj1})}}{14}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Capturing multiple faces using Viola-Jones Algorithm (Haar-Cascade)}}{14}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Crop the facial part and discard the rest of the image (of figure \ref {fig:vj3})}}{15}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Crop the facial part and discard the rest of the image (of figure \ref {fig:vj2})}}{15}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Crop the facial part and discard the rest of the image (of figure \ref {fig:vj4})}}{15}{figure.4.8}
+\addvspace {10\p@ }

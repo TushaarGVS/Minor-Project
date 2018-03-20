@@ -1,0 +1,24 @@
+\chapter{Conclusion and Future Work}
+
+Input image is captured through webcam (real-time). Viola-Jones \cite{viola2004} face detection technique is used to detect the facial image. Viola-Jones used Haar wavelet concept to develop integral image to detect face. Haar features consider the different intensity of values of adjacent rectangular region as different area of face has different value of intensity from other region (\textit{haarcascade\_frontalface\_default.xml} for training). After detection, facial image is saved for further processing and non-face area is removed. In image preprocessing, image is cropped according to required size and converted in gray image. This cropped image is used as input to Sobel filter for smoothing to remove the
+noise.
+
+\section{Proposed Work Plan of the project}
+
+\begin{table}[h]
+\centering
+\bgroup
+\def\arraystretch{1.5}
+\caption{Work Plan through the Course Time and Objectives}
+\begin{tabularx}{\linewidth}{X c c c c}
+\hline
+Milestones & February 2018 & Mid-March 2018 & End-March 2018 & April 2018 \\
+\hline
+Research and Feasibility study & \checkmark & \checkmark & \checkmark & \checkmark \\
+RPi3 configuration with real-time input capturing and pre-processing & & \checkmark & \checkmark & \checkmark \\
+Real-time emotion detection (RPi3) & & & \checkmark & \checkmark \\
+Master-Slave model (Quad-Pi) & & & & \checkmark \\
+\hline
+\end{tabularx}
+\egroup
+\end{table}
